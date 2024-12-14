@@ -17,9 +17,7 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 })
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
+
 
 
   app.get('/load-partial', (req, res) => {
@@ -64,3 +62,9 @@ try {
   return res.status(500).json({ message: 'Failed to send message. Please try again later.' });
 }
 });
+
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
+export default app;
